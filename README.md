@@ -1,5 +1,6 @@
 # Blog workshop
 
+1. Maak de applicatie lokaal draaiend.
 1. Voeg categorieën toe aan de posts. 
     - Een post moet meerdere categorieën kunnen bevatten.
     - Een categorie moet meerdere posts kunnen bevatten.
@@ -11,7 +12,7 @@
     - De homepage is traag door het grote aantal queries. Los dit op.
 1. Toon samenvattingen van posts op listing pagina's
     - Op pagina's met meerdere posts wordt nu de hele tekst van de post getoond. 
-    - Zorg ervoor dat de tekst wordt ingekort tot maximaal 200 tekens, gevolgd door ...  
+    - Zorg ervoor dat de tekst wordt ingekort tot maximaal 200 tekens, gevolgd door ...   
 
 ## Designs
 Designs voor de implementatie van categorieën.
