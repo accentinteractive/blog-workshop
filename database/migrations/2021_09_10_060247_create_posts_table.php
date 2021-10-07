@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePostsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -22,8 +23,7 @@ class CreatePostsTable extends Migration
         });
     }
 
-    /**Jopie
-     *
+    /**
      * Reverse the migrations.
      *
      * @return void

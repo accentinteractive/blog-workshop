@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class PostController extends Controller
+class UserController extends Controller
 {
 
     /**
@@ -18,23 +18,23 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Post::orderBy('id', 'desc')->get();
+        $authors = User::get();
 
-        return view('posts.index', compact('posts'));
+        return view('users.index', compact('authors'));
     }
 
     /**
      * Display the specified resource.
      *
      * @param Request $request
-     * @param $slug
+     * @param $id
      *
      * @return Response
      */
-    public function show(Request $request, $slug)
+    public function show(Request $request, $id)
     {
-        $post = Post::with('user')->where('slug', $slug)->firstOrFail();
+        $user = User::with('posts')->findOrFail($id);
 
-        return view('posts.show', compact('post'));
+        return view('users.show', compact('user'));
     }
 }

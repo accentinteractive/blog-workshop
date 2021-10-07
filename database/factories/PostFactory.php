@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 class PostFactory extends Factory
 {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -29,7 +30,9 @@ class PostFactory extends Factory
         foreach ($paragraphs as $paragraph) {
             $body .= '<p>' . $paragraph . '</p>';
         }
+
         return [
+            'user_id' => rand(1, 3),
             'title' => $title,
             'slug' => Str::slug($title),
             'body' => $body,
@@ -39,7 +42,7 @@ class PostFactory extends Factory
     /**
      * Indicate that the model's email address should be unverified.
      *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     * @return Factory
      */
     public function unverified()
     {
